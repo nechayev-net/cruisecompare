@@ -112,3 +112,17 @@
   .comparison td:nth-child(6) { grid-row:5; }
   .comparison .offercompare { padding:14px; }
 }
+
+.search-panel .searchrow{grid-template-columns:minmax(0,1fr)}
+.reset-link{display:inline-flex;align-items:center;min-height:36px;margin-top:8px;padding:4px 0;background:transparent;color:var(--accent);border-radius:4px;font-size:13px;font-weight:650;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.reset-link:hover{text-decoration-thickness:2px}
+.reset-link:focus-visible{outline:3px solid #4c9cf3;outline-offset:3px}
+
+/* Design refinement: filter reset belongs to the controls it affects. */
+.filter-actions{display:flex;justify-content:flex-end;align-items:center;margin-top:16px;padding-top:12px;border-top:1px solid var(--border)}
+.filter-actions .reset-link{margin:0;min-height:44px;padding:8px 12px;text-decoration:none;border:1px solid var(--border);border-radius:8px;background:transparent;color:var(--accent)}
+.filter-actions .reset-link:hover{background:var(--pill);text-decoration:underline}
+.filter-summary-actions{display:inline-flex;align-items:center;gap:10px}
+.active-filter-count:not([hidden]){display:inline-flex;align-items:center;border-radius:99px;padding:3px 8px;background:var(--pill);color:var(--accent);font-size:12px;font-weight:700;white-space:nowrap}
+@media(min-width:650px) and (max-width:1080px){.filtergrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.resulthead{gap:12px;flex-wrap:wrap}.resulthead #export{max-width:100%}}
